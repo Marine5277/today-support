@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Today 隐私说明公开审阅稿：本机记录、可选私人 iCloud、BYOK AI、系统权限和删除范围。尚未生效。">
+  <meta name="color-scheme" content="light dark">
+  <title>隐私说明审阅稿 · 今天 Today</title>
+  <link rel="icon" href="assets/app-icon.png">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">跳到正文</a>
+  <div class="draft-banner">网页预览 · 隐私说明为未生效审阅稿，尚不能作为商店正式政策</div>
+  <header class="site-header"><div class="header-inner">
+    <a class="brand" href="index.html"><img src="assets/app-icon.png" width="42" height="42" alt=""><span>今天 <span class="brand-en">Today</span></span></a>
+    <nav aria-label="主要导航"><a href="index.html">首页</a><a href="support.html">使用支持</a><a href="privacy.html" aria-current="page">隐私说明</a></nav>
+  </div></header>
+  <main id="main" class="page">
+    <header class="document-header"><p class="eyebrow">PRIVACY · REVIEW DRAFT</p><h1>记录的去向，<br>应当说清楚。</h1><p class="lead">Today 隐私说明审阅稿 · 更新于 2026-10-29<br>依据待发行源码，含构建 10 之后的修改 · 生效日期尚未确定</p></header>
+    <aside class="notice"><strong>这不是已生效的隐私政策。</strong><p>正式运营信息、第三方处理事实、儿童与监护保护及最终发行包仍待核实。此页先供开发者审阅，不得以删除“草稿”标记代替核实，也不得直接填入 App Store Connect 的正式政策字段。</p></aside>
+    <div class="document-layout">
+      <nav class="contents" aria-label="隐私说明目录"><p>本页内容</p><a href="#operator">联系与范围</a><a href="#local">本机记录</a><a href="#ai">AI 与分享范围</a><a href="#system">系统数据与权限</a><a href="#icloud">可选私人 iCloud</a><a href="#backup">导出与导入</a><a href="#delete">保留与删除</a><a href="#age">年龄与监护条件</a><a href="#website">网站访问</a><a href="#changes">更新与发布前核实</a></nav>
+      <article class="policy">
+        <section id="operator"><h2>1. 联系与适用范围</h2><p>运营者：Haiyang Wang（个人）。“海蓝喵咪科技”是获准公开的联系品牌，不是已核实的公司名称。隐私与支持邮箱：<a href="mailto:1035980509@qq.com">1035980509@qq.com</a>。本稿不据品牌推定注册法人；最终版本与生效资料仍待核实。</p><p>本稿说明当前本机优先、可选私人 CloudKit 的轻量候选。它不创建 Today 账号、不调用旧自建账号后端。历史服务与旧测试云数据仍独立保留；本次架构切换并不是历史数据已清理的证明。</p></section>
+        <section id="local"><h2>2. 本机记录与安全存储</h2><p>日记、显式心情、饮食、人民币账目、已保存复盘、助手聊天和偏好等保存在本机。App 还可能保存天气快照、你选择读取的健康摘要及用于核对中断输入的恢复副本。</p><p>业务数据库没有单独启用数据库加密。“本地优先”不等于解锁设备、系统备份或调试环境无法访问。请保护设备解锁权限并谨慎管理备份。</p><p>模型 API Key 使用系统安全存储，不写进业务 SQLite、普通 JSON 导出或 iCloud 同步。删除 App 不保证清除 iOS Keychain 中的项目；请在模型设置中主动管理 Key。删除本机 Key 不等于在供应商处撤销它。</p></section>
+        <section id="ai"><h2>3. AI 用途与分享选择</h2><p>AI 使用你配置的受支持模型服务和自己的 API Key。Key 发给所选服务用于鉴权，不由 Today 云端托管。不兼容的中转或尚未满足条件的目标不会自动继承官方服务的准入规则。</p><p>首次使用某类手动 AI 功能前，会说明接收方和分享范围；你明确授权后，同一模型配置下同类操作不再重复弹窗。普通聊天、所选记录聊天、早报、日程草稿、写作、营养，以及不同范围的复盘分别授权。修改供应商、地址、模型或 Key 配置后须重新授权。</p><ul><li>连接测试：固定的简短测试提示，不附带日记、饮食或健康记录。</li><li>写作辅助：本次确认的日记草稿与任务提示，不默认附加全部历史、天气或 HealthKit 摘要。</li><li>全天文字饮食估算：所选日期的已保存餐次文字，不是只发送一餐，也不是食物照片视觉估算。</li><li>生活复盘与追问：你确认范围的记录、对应复盘与本页追问上下文；本页连续追问可能再次发送原始记录范围。</li><li>助手聊天：本条消息、最近最多 8 条有长度限制的上下文、双方自定义称谓、已保存的关注主题，以及你主动选择的日记节选或日程标题和时间。选中快照会随本机聊天保存，删除原记录不会自动清掉聊天里的副本，后续获准的对话可能再次发送。自定义头像不随聊天发送。</li><li>公开来源早报：获准后读取自选公开来源并将匹配内容交给模型。定时提醒只是通用本地提示，不在 App 关闭后由服务器自动生成早报。</li></ul><p>可在“我的 → AI 数据授权”撤回手动授权；撤回会中止当前 AI 工作，但不能撤回第三方已收到的内容。授权记录仅保存在本机，不包含 Key、正文或年龄，不进入导出、导入或 iCloud。系统年龄、监护条件及系统操作确认仍独立核对。</p><p>自动生活复盘默认关闭，只有另行授权的目标、用途、范围和有效期内才可在本机前台尝试；手动 AI 授权不会启用自动复盘。</p><p>你写进所选正文的姓名、健康或其他敏感信息也可能随文字发送。供应商的费用、保留、处理地区及训练使用取决于其条款与设置，不能统一承诺“不保留、不训练”。取消或超时不能撤回已接收的内容，也不保证供应商停止计费。</p><p>AI 建议需由你筛选、编辑和确认，不自动覆盖原日记。营养是估值，不是医疗诊断、检测结果或治疗建议。</p></section>
+        <section id="system"><h2>4. 系统数据与权限</h2><p><strong>天气：</strong>使用已授权的前台定位或手动城市，不持续后台定位，业务记录不保存精确坐标。可记住手动查询成功的城市，未授权定位时在前台自动刷新；城市会交给系统地理编码和 Apple 天气服务。天气快照可能包含城市标签。</p><p><strong>健康：</strong>步数、活动能量、锻炼、睡眠和心率逐项选择并经系统授权读取。摘要留在本机，不默认发送 AI 或进入 iCloud。只有另行选择并授权后，已保存的整体心情才写回 Apple 健康的 dailyMood；不写日记、饮食或 AI 推断。</p><p><strong>照片、音乐、语音与邮件：</strong>主动选图后在设备上提取文字，不扫描整个相册；音乐仅读取获授权的有限媒体库和系统播放元数据，不代表完整在线曲库或历史。设备支持时使用本机听写及系统朗读，不上传录音。系统 Mail 由你确认发送，不读取收件箱、不索取邮箱密码或授权码。文字或单曲信息先进入可编辑草稿，再另行确认是否发给模型。</p><p><strong>日历：</strong>查看和编辑事件使用系统授权与系统表单。AI 日程建议不是执行结果，须由你另行确认保存。系统日历事件不属于 Today 的普通备份、私人云同步或本机清理范围。</p><p>可在系统设置管理权限。拒绝非必要权限不应阻断本机日记；撤销权限不会自动撤回已写入其他应用的内容。</p></section>
+        <section id="icloud"><h2>5. 可选私人 iCloud</h2><p>同步默认关闭，使用系统当前 Apple 账号的私人 CloudKit，不需要 Today 账号。你选择是否加入已有记录；可立即同步，返回前台也会尝试同步，不承诺后台实时上传。</p><p>当前只同步日记、显式心情、饮食及已确认的逐餐营养。账目、聊天、头像、模型 Key、天气、健康原始数据或摘要、独立恢复草稿不进入本版同步；其余数据可按备份说明另行管理。</p><p>冲突保留副本供核对，不以时间戳静默覆盖。轻量云空间与旧协调式测试空间隔离，不自动认领或删除旧云。iCloud 服务受系统账号、配额、网络与 Apple 状态影响；当前仍缺完整真实多设备验收。</p><p>关闭开关停止后续同步但保留云副本；已发请求仍可能完成。删除云副本需独立确认，中断时保留待办，未知结果不宣称完成。</p></section>
+        <section id="backup"><h2>6. 导出与导入</h2><p>普通 JSON 导出可包含已保存的记录、账目、聊天与偏好、复盘、冲突副本和可选健康摘要。Markdown 是按日期整理的阅读副本，不是可还原备份。独立恢复草稿、Key、登录凭据、系统权限、通知计划、AI 手动及自动授权不进入普通导出。</p><p>分卷备份按容量分别保存、分别恢复，不承诺整组一次性恢复。导入先预览并确认，已有记录优先；头像、资料和全天营养为另选内容，不恢复云同步或 AI 授权，不写入健康 App。</p><p>文件先在本机准备，再由你选择系统分享去向。关闭分享表单不代表已保存，请核对实际文件。原文手写的敏感信息仍保留，不是匿名化数据；外部文件由你保管。</p></section>
+        <section id="delete"><h2>7. 保留、撤回与删除</h2><p>本机记录保留到你明确删除或进行相应设备管理。某篇日记、单餐、模型 Key、本机全部记录与云副本是不同范围的操作。</p><p>“清除本机记录与模型 Key”会关闭本机同步、停止本地提醒并清理本机业务数据与本地凭据；不会自动删除 Apple 账号、云副本、外部导出、健康 App 样本或第三方已收到的内容。保留云副本后再次开启同步可能下载记录。</p><p>若希望清理本版云副本，应先在 iCloud 页面核对清理结果，再决定是否清本机。历史 Today 服务端账号、Apple 关联、旧测试云空间、日志和备份需要另行处理，不因升级或本机清理而被宣称已删除。</p><p>已有外部备份和第三方副本不由 Today 自动撤回，也不承诺所有物理介质或系统快照即时不可恢复。操作结果未知时，请保留原记录及备份并联系支持。</p></section>
+        <section id="age"><h2>8. 年龄与必要监护条件</h2><p>产品方向是本机记录面向所有年龄，AI 另按供应商条件及必要监护流程开放。准备 AI 时按需核对系统年龄范围；不收集生日或证件，不把年龄范围写进业务库、导出、iCloud 或模型参数。</p><p>系统要求未知、年龄未分享或必要条件不足时不发送。年龄分享、自述成年或普通勾选不代替监护人用途授权。</p><p><strong>发布前仍需完成：</strong>必要监护、适龄保护、真实系统表现、供应商年龄条款与发行地区评估。本稿不宣称这些工作已完成，不代表所有人群都已可使用 AI，也不预填商店最低年龄分级。</p></section>
+        <section id="website"><h2>9. 网站访问</h2><p>本网站没有反馈表单、广告、分析脚本、外部字体或主动调用 AI 的代码，点击邮箱链接由你的邮件客户端处理。</p><p>本网站使用 GitHub Pages 托管。访问时，GitHub 会出于安全目的处理访问日志，包括访问者 IP；这与 App 本机数据库是不同的数据流。本网站不连接 Today 用户数据库或模型 Key。详见 <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages" rel="noreferrer">GitHub Pages 官方说明</a>。网站上线不代表所有地区的访问性或 App 系统功能已通过验收。</p></section>
+        <section id="changes"><h2>10. 更新与发布前核实</h2><p>本稿尚未正式生效。新增接收方、数据用途或功能时，需要同步更新 App 提示、政策和商店申报，不能只修改日期。</p><p>正式主体、历史数据保留管理、第三方保护与处理地区、年龄和监护、真实系统权限、云删除与多设备行为，以及公开网址和最终商店标签，都要在发布前核实。此网站草稿不替代相关验收或法律审查。</p><p>隐私问题请联系 <a href="mailto:1035980509@qq.com">1035980509@qq.com</a>；不要发送 Key、密码、证件或完整私人记录。</p></section>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer"><div><strong>今天 Today</strong><p>运营者：Haiyang Wang<br>联系品牌：海蓝喵咪科技（个人运营）</p></div><div><a href="support.html#contact">联系支持</a><p>审阅更新：2026-10-29 · 尚未正式生效</p></div></footer>
+</body>
+</html>
